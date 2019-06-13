@@ -22,6 +22,7 @@ class IndexController
 
     public function index()
     {
-        return view('frontend.index');
+        $banners = $this->service->showBanner();
+        return view('frontend.index', compact('banners'));
     }
 }

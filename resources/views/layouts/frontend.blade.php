@@ -12,6 +12,8 @@
 <body>
 @include('partial.nav')
 
+@yield('banner')
+
 <div class="container">
     @yield('content')
 </div>

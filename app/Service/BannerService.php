@@ -26,6 +26,6 @@ class BannerService extends Service
     public function showBanner($id = null, $condition = [])
     {
         $condition['enable'] = 1;
-        return $this->get(Banner::class, $id, $condition);
+        return $this->get(Banner::class, $id, $condition, false);
     }
 }

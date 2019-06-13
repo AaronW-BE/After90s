@@ -51,13 +51,14 @@ abstract class Service
         }
     }
 
-    protected function get($model, $id = null, $condition = [])
+    protected function get($model, $id = null, $condition = [], $pagination = true)
     {
         if ($id) {
             $res = $model::query()->find($id);
         }else{
             $perPage = request('per_page', 15);
-            $res = $model::query()->where($condition)   ->paginate($perPage);
+            $query = $model::query()->where($condition);
+            $res = $pagination ? $query->paginate($perPage) : $query->get();
         }
         if ($this->isNeedJson()) {
             return $this->success($res);
