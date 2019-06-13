@@ -1,0 +1,105 @@
+.breadcrumb-wrap {
+    padding: .5rem;
+}
+
+.detail-wrap {
+    position: relative;
+}
+
+.detail-wrap .pic-preview-wrap, .detail-wrap .schedule-detail-wrap{
+    float: left;
+    overflow: hidden;
+}
+
+.detail-wrap .pic-preview-wrap {
+    width: 60%;
+}
+.detail-wrap .schedule-detail-wrap {
+    width: 40%;
+}
+
+.pic-preview-wrap .img-preview {
+    height: 25rem;
+    width: 20rem;
+    text-align: center;
+    padding: .5rem;
+}
+.pic-preview-wrap .img-preview img {
+    height: 100%;
+}
+
+.detail-wrap .img-list {
+    padding: .5rem;
+}
+.img-list .img {
+    height: 5rem;
+    display: inline-block;
+    padding: .2rem;
+    border: 2px solid transparent;
+}
+
+.img-list .img:hover {
+    border-color: #1eac70;
+}
+
+.img-list .img.active {
+    border-color: #65c65b;
+}
+
+.img img {
+    height: 100%;
+}
+
+.schedule-detail-wrap {
+    padding: .5rem;
+}
+.schedule-detail-wrap .title {
+    font-size: 1.2rem;
+}
+.label {
+    padding: .1rem .5rem;
+    background-color: #65c65b;
+    color: #ffffff;
+    font-size: .8rem;
+}
+
+.schedule-detail-wrap .tips {
+    background-color: #84c9ff;
+    padding: .5rem;
+    color: #ffffff;
+    margin-top: .8rem;
+}
+
+.schedule-detail-wrap .info-wrap {
+    padding: .5rem;
+}
+.schedule-detail-wrap .info-wrap span {
+    margin: auto 1rem;
+}
+
+.schedule-detail-wrap .amount-wrap {
+    padding: 1rem;
+}
+
+.amount-wrap .price-wrap {
+    color: #ff3333;
+}
+.price-wrap .price {
+    font-size: 1.5rem;
+}
+
+.amount-wrap .price-wrap, .amount-wrap .order-btn-wrap {
+    display: inline-block;
+    width: 49%;
+    overflow: hidden;
+}
+
+.order-btn-wrap {
+    text-align: right;
+}
+.order-btn {
+    background-color: #65c65b;
+    color: #ffffff;
+    padding: .3rem .6rem;
+    cursor: pointer;
+}

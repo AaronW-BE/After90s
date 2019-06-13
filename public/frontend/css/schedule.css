@@ -1,0 +1,167 @@
+.swiper-container{
+    position: relative;
+}
+.banner{
+   height:30rem;
+}
+.banner img{
+    width:100%;
+    height:100%;
+}
+.classification-wrap{
+    background-color: #fff;
+    /*height:30rem;*/
+    margin: 1rem;
+    padding: .5rem;
+}
+
+.classification-wrap .filter-type {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 1rem;
+}
+.classification{
+    padding-left: 1rem;
+}
+.classification li{
+    float:left;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    padding: .1rem .8rem;
+    cursor: pointer;
+}
+.classification li.active,.classification li:active, .classification li:hover {
+    background-color: #378fff;
+    color: #ffffff;
+}
+
+.schedule-wrap {
+    width: 45rem;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.side-section-wrap {
+    /*display: inline-block;*/
+    /*overflow: hidden;*/
+    /*width: 25rem;*/
+}
+
+.schedule-item {
+    padding: 1.5rem;
+    background-color: #fff;
+    margin: .8rem;
+}
+.schedule-item:hover {
+    box-shadow: 1px 1px 3px 1px #c5c5c5;
+}
+
+.schedule-item .cover {
+    width: 22rem;
+    height: 16rem;
+}
+
+.cover img {
+    width: 100%;
+    height: 100%;
+}
+
+.schedule-item .cover, .schedule-item .desc {
+    display: inline-block;
+    overflow: hidden;
+}
+
+.schedule-item .desc {
+    padding-left: 1rem;
+}
+.schedule-item .desc .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.schedule-item .desc .summary {
+    height: 9rem;
+    width: 15rem;
+}
+
+.schedule-item .desc .tips {
+    font-size: .8rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+.schedule-item .desc .tips span {
+    padding: .8rem;
+}
+
+.schedule-item .desc .price-wrap {
+    color: #e9574d;
+}
+.price-wrap .price {
+    font-size: 1.5rem;
+}
+.schedule-item .desc .price-wrap, .schedule-item .btn-wrap {
+    display: inline-block;
+    width: 49%;
+    overflow: hidden;
+}
+
+.schedule-item .btn {
+    font-size: .7rem;
+    color: #ffffff;
+    background-color: #33f;
+    cursor: pointer;
+    text-align: right;
+}
+.schedule-item .btn:hover {
+    color: #ffffff;
+    box-shadow: 1px 1px 3px #4e555b;
+}
+
+
+.recommend-schedule-card {
+    width: 20rem;
+    padding: 1rem;
+    background-color: #fff;
+    margin-top: .5rem;
+}
+
+.recommend-schedule-card .title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cover {
+    width: 100%;
+}
+
+.recommend-schedule-card .tips {
+
+}
+.recommend-schedule-card .tips div {
+    width: 49%;
+}
+
+.recommend-schedule-card .tips .desc-time {
+    text-align: left;
+    display: inline-block;
+}
+.recommend-schedule-card .tips .price-wrap {
+    text-align: right;
+    display: inline-block;
+}
+
+
+.footer-container {
+    background-color: #191919;
+    padding: 5rem;
+    margin-top: 2rem;
+}
+
+.contact-wrap {
+    margin: 1.5rem auto;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+.site-info-wrap {
+    color: #ffffff;
+}
