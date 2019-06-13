@@ -11,6 +11,18 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+use Illuminate\Support\Facades\Route;
+
+
+
+Route::namespace('Frontend')->group(function () {
+    Route::get('/', 'IndexController@index');
+    Route::get('schedule', 'ScheduleController@view');
+    Route::get('schedule/{id}', 'ScheduleController@detail');
+
+    Route::get('base', 'BaseController@view');
+    Route::get('base/{id}', 'BaseController@detail');
+
+
 });
+

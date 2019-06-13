@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSchudulesTable extends Migration
+class CreateSchedulesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,18 @@ class CreateSchudulesTable extends Migration
      */
     public function up()
     {
-        Schema::create('schudules', function (Blueprint $table) {
+        Schema::create('schedules', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('title');
+            $table->string('tags');
+            $table->text('description');
+            $table->decimal('price', 9,2);
+            $table->string('location');
+            $table->string('duration');
+            $table->string('people_count');
+            $table->string('benefits');
+            $table->string('cover');
+            $table->text('albums');
             $table->timestamps();
         });
     }

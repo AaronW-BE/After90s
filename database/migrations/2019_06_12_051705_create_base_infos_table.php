@@ -15,6 +15,13 @@ class CreateBaseInfosTable extends Migration
     {
         Schema::create('base_infos', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('title');
+            $table->string('cover');
+            $table->string('albums');
+            $table->string('video');
+            $table->string('address');
+            $table->string('specials');
+            $table->text('description');
             $table->timestamps();
         });
     }
