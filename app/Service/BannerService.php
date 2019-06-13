@@ -23,8 +23,9 @@ class BannerService extends Service
         return $this->delete(Banner::class, $id);
     }
 
-    public function showBanner($id = null)
+    public function showBanner($id = null, $condition = [])
     {
-        return $this->get(Banner::class, $id);
+        $condition['enable'] = 1;
+        return $this->get(Banner::class, $id, $condition);
     }
 }
