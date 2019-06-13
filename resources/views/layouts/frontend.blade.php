@@ -12,11 +12,10 @@
 <body>
 @include('partial.nav')
 
-@section('sidebar')
-@endsection
-
 <div class="container">
     @yield('content')
 </div>
+
+@include('partial.footer')
 </body>
 </html>
