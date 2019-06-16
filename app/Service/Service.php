@@ -13,10 +13,7 @@ abstract class Service
     protected function create($model, $data)
     {
         $res = $model::query()->create($data);
-        if ($this->isNeedJson()) {
-            return $this->success("更新成功");
-        }
-        return true;
+        return $this->success("创建成功");
     }
 
     protected function delete($model, $id)
