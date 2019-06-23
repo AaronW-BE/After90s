@@ -21,10 +21,7 @@ abstract class Service
         try {
             $res = $model::destroy($id);
             if ($res) {
-                if ($this->isNeedJson()) {
-                    return $this->success("删除成功");
-                }
-                return true;
+                return $this->success("删除成功");
             }
             throw new \Exception("删除失败");
         } catch (\Exception $e) {

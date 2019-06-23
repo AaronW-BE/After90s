@@ -26,4 +26,9 @@ class BannerController extends Controller
         $data = $request->all();
         return $this->bannerService->createBanner($data);
     }
+
+    public function remove($id)
+    {
+        return $this->bannerService->removeBanner($id);
+    }
 }

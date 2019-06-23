@@ -27,4 +27,9 @@ class ScheduleController extends Controller
         $data = $request->all();
         return $this->scheduleService->createSchedule($data);
     }
+
+    public function remove($id)
+    {
+        return $this->scheduleService->removeSchedule($id);
+    }
 }

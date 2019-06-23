@@ -27,4 +27,9 @@ class ScheduleTypeController extends Controller
         $data = $request->all();
         return $this->typeService->createType($data);
     }
+
+    public function remove($id)
+    {
+        return $this->typeService->removeType($id);
+    }
 }

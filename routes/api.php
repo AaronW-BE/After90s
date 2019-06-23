@@ -29,6 +29,7 @@ Route::prefix('auth')->group(function () {
 
 Route::middleware(['jwt.auth'])->namespace('Admin')->group(function () {
     Route::get('schedule/{id?}', 'ScheduleController@show');
+    Route::delete('schedule/{id?}', 'ScheduleController@remove');
     Route::post('schedule', 'ScheduleController@create');
 
     Route::get('banner/{id?}', 'BannerController@show');
@@ -39,6 +40,7 @@ Route::middleware(['jwt.auth'])->namespace('Admin')->group(function () {
 
 
     Route::get('category/{id?}', 'ScheduleTypeController@show');
+    Route::delete('category/{id?}', 'ScheduleTypeController@remove');
     Route::post('category/create', 'ScheduleTypeController@create');
 
     Route::get('base/{id?}', 'BaseInfoController@show');
