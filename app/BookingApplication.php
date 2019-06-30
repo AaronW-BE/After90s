@@ -7,4 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class BookingApplication extends Model
 {
     //
+    protected $guarded = [];
+
 }

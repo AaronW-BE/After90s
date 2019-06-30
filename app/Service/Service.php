@@ -50,7 +50,7 @@ abstract class Service
         if ($id) {
             $res = $model::query()->find($id);
         }else{
-            $perPage = request('per_page', 15);
+            $perPage = request('per_page', 99);
             $query = $model::query()->where($condition);
             $res = $pagination ? $query->paginate($perPage) : $query->get();
         }

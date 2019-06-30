@@ -27,4 +27,9 @@ class CaseController extends Controller
         $data = $request->all();
         return $this->caseService->createCase($data);
     }
+
+    public function remove($id)
+    {
+        return $this->caseService->removeCase($id);
+    }
 }

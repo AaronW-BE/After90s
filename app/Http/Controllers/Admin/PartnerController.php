@@ -28,4 +28,9 @@ class PartnerController extends Controller
         $data = $request->all();
         return $this->partnerService->createPartner($data);
     }
+
+    public function remove($id)
+    {
+        return $this->partnerService->removePartner($id);
+    }
 }

@@ -28,4 +28,9 @@ class PartnerService extends Service
     {
         return $this->get(Partner::class, $id, $condition);
     }
+
+    public function getPartners()
+    {
+        return Partner::all();
+    }
 }

@@ -11,18 +11,26 @@ namespace App\Http\Controllers\Frontend;
 
 
 use App\Service\BannerService;
+use App\Service\PartnerService;
+use App\Service\ScheduleTypeService;
 
 class IndexController
 {
     private $service;
-    public function __construct(BannerService $service)
+    private $typeService;
+    private $partnerService;
+    public function __construct(BannerService $service, ScheduleTypeService $typeService, PartnerService $partnerService)
     {
         $this->service = $service;
+        $this->typeService = $typeService;
+        $this->partnerService = $partnerService;
     }
 
     public function index()
     {
         $banners = $this->service->showBanner();
-        return view('frontend.index', compact('banners'));
+        $cateWithSchedule = $this->typeService->showTypesWithCategory();
+        $partners = $this->partnerService->getPartners();
+        return view('frontend.index', compact(['banners', 'cateWithSchedule', 'partners']));
     }
 }

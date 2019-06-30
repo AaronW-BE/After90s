@@ -27,4 +27,11 @@ class ScheduleTypeService extends Service
     {
         return $this->get(ScheduleType::class, $id, $condition);
     }
+
+    public function showTypesWithCategory()
+    {
+        return ScheduleType::query()->with(['schedules' => function($query){
+            $query->take(5);
+        }])->get();
+    }
 }

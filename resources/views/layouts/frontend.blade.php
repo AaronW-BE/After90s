@@ -14,10 +14,16 @@
 
 @yield('banner')
 
-<div class="container">
+<div class="container bg-img">
     @yield('content')
 </div>
 
 @include('partial.footer')
+
+<script src="{{asset('frontend/lib/jquery/jquery-3.4.1.min.js')}}"></script>
+<script src="{{asset('frontend/lib/lazyload/jquery.lazyload.js')}}"></script>
+<script src="{{asset('frontend/lib/bootstrap-4.3.1/js/bootstrap.js')}}"></script>
+<script src="{{asset('frontend/js/common.js')}}"></script>
+<script src="{{asset('frontend/js/common.js')}}"></script>
 </body>
 </html>

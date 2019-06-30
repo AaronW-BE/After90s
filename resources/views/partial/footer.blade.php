@@ -3,10 +3,10 @@
         <div class="row">
             <div class="col-md-10">
                 <div class="links-wrap">
-                    <a href="#">关于我们</a>
-                    <a href="#">联系我们</a>
-                    <a href="#">服务跳转</a>
-                    <a href="#">加入我们</a>
+{{--                    <a href="#">关于我们</a>--}}
+{{--                    <a href="#">联系我们</a>--}}
+{{--                    <a href="#">服务跳转</a>--}}
+{{--                    <a href="#">加入我们</a>--}}
                 </div>
 
                 <div class="contact-wrap">

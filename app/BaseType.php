@@ -4,9 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class BaseInfo extends Model
+class BaseType extends Model
 {
     //
-    protected $guarded = [];
-
 }

@@ -26,4 +26,9 @@ class BaseInfoController extends Controller
         $data = $request->all();
         return $this->baseService->createBase($data);
     }
+
+    public function remove($id)
+    {
+        return $this->baseService->removeBase($id);
+    }
 }

@@ -139,7 +139,7 @@
 
 }
 .case-category-container .list {
-    text-align: center;
+    text-align: left;
 }
 
 .case-category-container .list .list-item {
@@ -231,6 +231,7 @@
 .cover-bg-font{
     font-size: 1.5rem;
     line-height: 4rem;
+    text-align: center;
 }
 
 .banner-img{
