@@ -13,4 +13,9 @@ class Schedule extends Model
     {
         return explode(',', $val);
     }
+
+    public function getTagsAttribute($val)
+    {
+        return explode(',', $val);
+    }
 }

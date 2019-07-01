@@ -165,7 +165,7 @@
         @endforeach
 
         <div class="category-wrap">
-            <div class="section-title">热门团建</div>
+            <div class="section-title">基地探索</div>
             <div class="list">
                 <div class="list-item">
                     <div class="cover-bg">

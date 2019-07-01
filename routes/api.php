@@ -19,6 +19,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
+Route::post('schedule/apply', 'Admin\BookingApplicationController@apply')->name('schedule.apply');
+
 Route::namespace('Frontend')->group(function () {
     Route::get('schedule/query', 'ScheduleController@query');
 });
