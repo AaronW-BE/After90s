@@ -15,97 +15,62 @@
 
 @section('content')
     <div class="category-wrap">
-        <div class="category-item active">全部</div>
-        <div class="category-item">杭州市内</div>
-        <div class="category-item">杭州周边</div>
-        <div class="category-item">省外</div>
-        <div class="category-item">其他</div>
-        <div class="category-item">其他</div>
-        <div class="category-item">其他</div>
-        <div class="category-item">其他</div>
-        <div class="category-item">其他</div>
-        <div class="category-item">其他</div>
-        <div class="category-item">其他</div>
-        <div class="category-item">其他</div>
+        <div class="category-item active" data-type_id="0">全部</div>
+        @foreach($baseTypes as $type)
+            <div class="category-item" data-type_id="{{$type->id}}">{{$type->name}}</div>
+        @endforeach
         <div class="clearfix"></div>
     </div>
     <div class="basement-blocks-wrap">
-        <div class="row">
-            <div class="col-4">
-                <div class="basement-card">
-                    <div class="cover">
-                        <a href="./basementDetail.html">
-                            <img src="../img/index/banner.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="title">杭州乐园</div>
-                    <div class="desc">
-                        <span>杭州乐园快来玩</span>
-                    </div>
-                    <div class="specialize">
-                        特色项目:<span class="item">过山车</span>
-                    </div>
-                </div>
-            </div>
+        <div class="row basement-item">
 
-            <div class="col-4">
-                <div class="basement-card">
-                    <div class="cover">
-                        <img src="../img/index/banner.jpg" alt="">
-                    </div>
-                    <div class="title">杭州乐园</div>
-                    <div class="desc">
-                        <span>杭州乐园快来玩</span>
-                    </div>
-                    <div class="specialize">
-                        特色项目:<span class="item">过山车</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-4">
-                <div class="basement-card">
-                    <div class="cover">
-                        <img src="../img/index/banner.jpg" alt="">
-                    </div>
-                    <div class="title">杭州乐园</div>
-                    <div class="desc">
-                        <span>杭州乐园快来玩</span>
-                    </div>
-                    <div class="specialize">
-                        特色项目:<span class="item">过山车</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-4">
-                <div class="basement-card">
-                    <div class="cover">
-                        <img src="../img/index/banner.jpg" alt="">
-                    </div>
-                    <div class="title">杭州乐园</div>
-                    <div class="desc">
-                        <span>杭州乐园快来玩</span>
-                    </div>
-                    <div class="specialize">
-                        特色项目:<span class="item">过山车</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="basement-card">
-                    <div class="cover">
-                        <img src="../img/index/banner.jpg" alt="">
-                    </div>
-                    <div class="title">杭州乐园</div>
-                    <div class="desc">
-                        <span>杭州乐园快来玩</span>
-                    </div>
-                    <div class="specialize">
-                        特色项目:<span class="item">过山车</span>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
+@endsection
+
+@section('scripts')
+    <script>
+        $(function () {
+
+            loadData();
+
+            $('.category-item').on('click', function () {
+                $(this).addClass('active').siblings().removeClass('active');
+                let typeId = $(this).attr('data-type_id');
+                loadData(typeId)
+
+            });
+
+            function loadData(typeId = 0) {
+                $.get('{{route('base.query')}}', {
+                    type_id: typeId
+                }, function (res) {
+                    console.log(res)
+
+                    if (res.code === 0) {
+                        $('.basement-item').empty();
+                        res.data.forEach(function (item) {
+                            let tpl = `
+                            <div class="col-4">
+                                <div class="basement-card base-detail-btn" data-base_id="${item.id}">
+                                    <div class="cover">
+                                            <img src="${item.cover}" alt="">
+                                    </div>
+                                    <div class="title">${item.title}</div>
+                                    <div class="desc">
+                                        <span>${item.address}</span>
+                                    </div>
+                                    <div class="specialize">
+                                        特色项目:<span class="item">${item.specials}</span>
+                                    </div>
+                                </div>
+                            </div>`;
+                            $('.basement-item').append(tpl);
+                        })
+
+                    }
+                })
+            }
+        });
+    </script>
 @endsection

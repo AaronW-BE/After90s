@@ -27,4 +27,12 @@ class BaseInfoService extends Service
     {
         return $this->get(BaseInfo::class, $id);
     }
+
+    public function query($typeId)
+    {
+        if ($typeId) {
+            return BaseInfo::query()->where('base_type_id', $typeId)->get();
+        }
+        return BaseInfo::query()->get();
+    }
 }

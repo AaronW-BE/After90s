@@ -23,6 +23,7 @@ Route::post('schedule/apply', 'Admin\BookingApplicationController@apply')->name(
 
 Route::namespace('Frontend')->group(function () {
     Route::get('schedule/query', 'ScheduleController@query');
+    Route::get('base/query', 'BaseController@query')->name('base.query');
 });
 
 Route::prefix('auth')->group(function () {

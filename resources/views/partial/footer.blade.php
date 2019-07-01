@@ -37,5 +37,16 @@
                 window.location.href = url;
             }
         });
+
+        $('.base-detail-btn').on('click', function () {
+            console.log('click');
+            {{--let targetId = $(this).attr('data-base_id');--}}
+            {{--console.log(targetId);--}}
+            {{--if (targetId) {--}}
+            {{--    let url = `{{route('base.detail', '_s_id_')}}`.replace('_s_id_', targetId);--}}
+            {{--    console.log(url);--}}
+            {{--    window.location.href = url;--}}
+            {{--}--}}
+        });
     }
 </script>

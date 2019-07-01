@@ -26,4 +26,9 @@ class BaseTypeService extends Service
     {
         return $this->get(BaseType::class, $id, $condition);
     }
+
+    public function getTypes()
+    {
+        return BaseType::query()->get();
+    }
 }
