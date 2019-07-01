@@ -23,11 +23,11 @@ Route::get('/', function () {
 });
 
 Route::namespace('Frontend')->group(function () {
-    Route::get('/', 'IndexController@index');
-    Route::get('schedule', 'ScheduleController@view');
-    Route::get('schedule/{id}', 'ScheduleController@detail');
+    Route::get('/', 'IndexController@index')->name('index');
+    Route::get('schedule.html', 'ScheduleController@view')->name('schedule.list');
+    Route::get('schedule/{id}.html', 'ScheduleController@detail')->name('schedule.detail');
 
-    Route::get('base', 'BaseController@view');
-    Route::get('base/{id}', 'BaseController@detail');
+    Route::get('base-explore.html', 'BaseController@view')->name('base.list');
+    Route::get('base-explore/{id}.html', 'BaseController@detail')->name('base.detail');
 });
 

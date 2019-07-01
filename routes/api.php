@@ -19,6 +19,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
+Route::namespace('Frontend')->group(function () {
+    Route::get('schedule/query', 'ScheduleController@query');
+});
+
 Route::prefix('auth')->group(function () {
 
     Route::post('login', 'AuthController@login');

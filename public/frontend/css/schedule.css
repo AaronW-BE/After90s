@@ -31,7 +31,7 @@
     cursor: pointer;
 }
 .classification li.active,.classification li:active, .classification li:hover {
-    background-color: #378fff;
+    background-color: #42B730;
     color: #ffffff;
 }
 
@@ -92,6 +92,10 @@
     padding: .8rem;
 }
 
+.schedule-item .desc .info {
+    width: 100%;
+}
+
 .schedule-item .desc .price-wrap {
     color: #e9574d;
 }
@@ -100,16 +104,16 @@
 }
 .schedule-item .desc .price-wrap, .schedule-item .btn-wrap {
     display: inline-block;
-    width: 49%;
     overflow: hidden;
 }
 
 .schedule-item .btn {
     font-size: .7rem;
     color: #ffffff;
-    background-color: #33f;
+    background-color: #42B730;
     cursor: pointer;
     text-align: right;
+    margin-left: 1rem;
 }
 .schedule-item .btn:hover {
     color: #ffffff;

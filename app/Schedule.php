@@ -8,4 +8,9 @@ class Schedule extends Model
 {
     //
     protected $guarded = [];
+
+    public function getAlbumsAttribute($val)
+    {
+        return explode(',', $val);
+    }
 }

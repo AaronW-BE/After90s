@@ -12,4 +12,12 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
     use ApiResponse;
+
+    public function retAjax($data = [])
+    {
+        return [
+            'code' => 0,
+            'data' => $data
+        ];
+    }
 }

@@ -25,3 +25,17 @@
         </div>
     </div>
 </div>
+
+<script>
+    window.onload = function () {
+        $('.schedule-detail-btn').on('click', function () {
+            let targetId = $(this).attr('data-schedule_id');
+            console.log(targetId);
+            if (targetId) {
+                let url = `{{route('schedule.detail', '_s_id_')}}`.replace('_s_id_', targetId);
+                console.log(url);
+                window.location.href = url;
+            }
+        });
+    }
+</script>

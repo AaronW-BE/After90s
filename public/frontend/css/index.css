@@ -173,7 +173,7 @@
     text-align: left;
 }
 .item-footer .desc .desc-time{
-    width: 62%;
+    /*width: 62%;*/
 }
 .item-footer .desc .desc-time, .item-footer .desc .desc-price{
     display: inline-block;
@@ -181,7 +181,7 @@
     padding: 0 0.5rem;
 }
 .item-footer .desc .desc-price{
-    width:35%;
+    /*width:35%;*/
     text-align: right;
     color:#FC384F;
 }

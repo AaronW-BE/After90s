@@ -1,5 +1,9 @@
 @extends('layouts.frontend')
 
+@section('styles')
+    <link rel="stylesheet" href="{{asset('frontend/css/index.css')}}">
+@endsection
+
 @section('banner')
     @component('component.banner', ['list' => $banners])
     @endcomponent
@@ -136,7 +140,7 @@
                 <div class="section-title">{{$cate->name}}</div>
                 <div class="list">
                     @foreach($cate->schedules as $schedule)
-                        <div class="list-item">
+                        <div class="list-item schedule-detail-btn" data-schedule_id="{{$schedule->id}}">
                             <div class="cover">
                                 <img class="lazy" data-original="{{$schedule->cover}}" alt="">
                             </div>
@@ -314,13 +318,15 @@
     </div>
     <!--    合作-->
     <div>
-        <div class="section-title">合作伙伴</div>
-        <div class="corp-wrap">
-            @foreach($partners as $partner)
-            @endforeach
-            <div class="corp-item">
-                <img class="lazy" data-original="{{$partner->logo ?? ''}}" alt="">
+        @if(count($partners))
+            <div class="section-title">合作伙伴</div>
+            <div class="corp-wrap">
+                @foreach($partners as $partner)
+                    <div class="corp-item">
+                        <img class="lazy" data-original="{{$partner->logo ?? ''}}" alt="">
+                    </div>
+                @endforeach
             </div>
-        </div>
+        @endif
     </div>
 @endsection

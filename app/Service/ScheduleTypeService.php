@@ -34,4 +34,9 @@ class ScheduleTypeService extends Service
             $query->take(5);
         }])->get();
     }
+
+    public function getTypes()
+    {
+        return ScheduleType::query()->get();
+    }
 }
