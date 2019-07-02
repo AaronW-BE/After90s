@@ -58,7 +58,7 @@
         <div class="clearfix"></div>
         <div class="section-title">方案详情</div>
         <div class="schedule-desc-wrap">
-            {{$schedule->description}}
+            {!! $schedule->description !!}
         </div>
     </div>
     <!-- Modal -->

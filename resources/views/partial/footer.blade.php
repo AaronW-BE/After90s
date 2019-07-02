@@ -3,8 +3,8 @@
         <div class="row">
             <div class="col-md-10">
                 <div class="links-wrap">
-{{--                    <a href="#">关于我们</a>--}}
-{{--                    <a href="#">联系我们</a>--}}
+                    <a href="{{route('base.list')}}">基地探索</a>
+                    <a href="{{route('schedule.list')}}">线路查询</a>
 {{--                    <a href="#">服务跳转</a>--}}
 {{--                    <a href="#">加入我们</a>--}}
                 </div>
@@ -15,7 +15,7 @@
 
                 <div class="site-info-wrap">
                     <span class="copyright">Copyright {{date('Y')}} 杭州秉诚户外运动策划有限公司. All Rights Reserved</span>
-                    <span class="record"> 浙ICP备13023188号-2 </span>
+                    <span class="record"> 浙ICP备19026214号-1 </span>
                 </div>
             </div>
             <div class="col-md">
@@ -39,14 +39,14 @@
         });
 
         $('.base-detail-btn').on('click', function () {
-            console.log('click');
-            {{--let targetId = $(this).attr('data-base_id');--}}
-            {{--console.log(targetId);--}}
-            {{--if (targetId) {--}}
-            {{--    let url = `{{route('base.detail', '_s_id_')}}`.replace('_s_id_', targetId);--}}
-            {{--    console.log(url);--}}
-            {{--    window.location.href = url;--}}
-            {{--}--}}
+            let targetId = $(this).attr('data-base_id');
+            if (targetId) {
+                let url = `{{route('base.detail', '_s_id_')}}`.replace('_s_id_', targetId);
+                console.log(url);
+                window.location.href = url;
+            }
         });
+
+
     }
 </script>

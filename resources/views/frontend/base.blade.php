@@ -34,25 +34,25 @@
 
             loadData();
 
-            $('.category-item').on('click', function () {
+            $('.category-item').on('click',  function () {
                 $(this).addClass('active').siblings().removeClass('active');
                 let typeId = $(this).attr('data-type_id');
                 loadData(typeId)
-
             });
+        });
 
-            function loadData(typeId = 0) {
-                $.get('{{route('base.query')}}', {
-                    type_id: typeId
-                }, function (res) {
-                    console.log(res)
+        function loadData(typeId = 0) {
+            $.get('{{route('base.query')}}', {
+                type_id: typeId
+            }, function (res) {
+                console.log(res)
 
-                    if (res.code === 0) {
-                        $('.basement-item').empty();
-                        res.data.forEach(function (item) {
-                            let tpl = `
-                            <div class="col-4">
-                                <div class="basement-card base-detail-btn" data-base_id="${item.id}">
+                if (res.code === 0) {
+                    $('.basement-item').empty();
+                    res.data.forEach(function (item) {
+                        let tpl = `
+                            <div class="base-detail-btn col-4" data-base_id="${item.id}" onclick="jump(this)">
+                                <div class="basement-card">
                                     <div class="cover">
                                             <img src="${item.cover}" alt="">
                                     </div>
@@ -65,12 +65,20 @@
                                     </div>
                                 </div>
                             </div>`;
-                            $('.basement-item').append(tpl);
-                        })
+                        $('.basement-item').append(tpl);
+                    })
 
-                    }
-                })
+                }
+            })
+        }
+
+        function jump(e) {
+            let targetId = $(e).attr('data-base_id');
+            if (targetId) {
+                let url = `{{route('base.detail', '_s_id_')}}`.replace('_s_id_', targetId);
+                console.log(url);
+                window.location.href = url;
             }
-        });
+        }
     </script>
 @endsection

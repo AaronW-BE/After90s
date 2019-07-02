@@ -167,48 +167,22 @@
         <div class="category-wrap">
             <div class="section-title">基地探索</div>
             <div class="list">
-                <div class="list-item">
-                    <div class="cover-bg">
-                        <div class="cover-bg-img">
-                            <img src="{{asset('frontend/img/index/images%20(1).jpg')}}" alt="">
+                @foreach($baseList as $base)
+                    <div class="list-item base-detail-btn" data-base_id="{{$base->id}}">
+                        <div class="cover-bg">
+                            <div class="cover-bg-img">
+                                <img src="{{$base->cover}}" alt="">
+                            </div>
+                            <div class="cover-bg-shadow">
+                                <img src="{{asset('frontend/img/icon/on.svg')}}" alt="">
+                            </div>
+                            <span class="cover-bg-playback">播放：{{random_int(100,500)}}</span>
                         </div>
-                        <div class="cover-bg-shadow">
-                            <img src="{{asset('frontend/img/icon/on.svg')}}" alt="">
+                        <div class="cover-bg-font">
+                            <span>藏西秘境 去浪阿里</span>
                         </div>
-                        <span class="cover-bg-playback">播放：3562</span>
                     </div>
-                    <div class="cover-bg-font">
-                        <span>藏西秘境 去浪阿里</span>
-                    </div>
-                </div>
-                <div class="list-item">
-                    <div class="cover-bg">
-                        <div class="cover-bg-img">
-                            <img src="{{asset('frontend/img/index/images%20(1).jpg')}}" alt="">
-                        </div>
-                        <div class="cover-bg-shadow">
-                            <img src="{{asset('frontend/img/icon/on.svg')}}" alt="">
-                        </div>
-                        <span class="cover-bg-playback">播放：3562</span>
-                    </div>
-                    <div class="cover-bg-font">
-                        <span>藏西秘境 去浪阿里</span>
-                    </div>
-                </div>
-                <div class="list-item">
-                    <div class="cover-bg">
-                        <div class="cover-bg-img">
-                            <img src="{{asset('frontend/img/index/images%20(1).jpg')}}" alt="">
-                        </div>
-                        <div class="cover-bg-shadow">
-                            <img src="{{asset('frontend/img/icon/on.svg')}}" alt="">
-                        </div>
-                        <span class="cover-bg-playback">播放：3562</span>
-                    </div>
-                    <div class="cover-bg-font">
-                        <span>藏西秘境 去浪阿里</span>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>

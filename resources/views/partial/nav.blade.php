@@ -28,12 +28,12 @@
                 </li>
             </ul>
 
-            <form class="form-inline">
-                <label>
-                    <input class="form-control mr-sm-2" type="search" placeholder="请输入搜索行程关键字" />
-                    <button class="btn btn-outline-success" type="submit">搜索</button>
-                </label>
-            </form>
+{{--            <form class="form-inline">--}}
+{{--                <label>--}}
+{{--                    <input class="form-control mr-sm-2" type="search" placeholder="请输入搜索行程关键字" />--}}
+{{--                    <button class="btn btn-outline-success" type="submit">搜索</button>--}}
+{{--                </label>--}}
+{{--            </form>--}}
         </div>
     </div>
 

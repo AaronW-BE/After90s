@@ -11,6 +11,7 @@ namespace App\Http\Controllers\Frontend;
 
 
 use App\Service\BannerService;
+use App\Service\BaseInfoService;
 use App\Service\PartnerService;
 use App\Service\ScheduleTypeService;
 
@@ -19,11 +20,13 @@ class IndexController
     private $service;
     private $typeService;
     private $partnerService;
+    private $baseService;
     public function __construct(BannerService $service, ScheduleTypeService $typeService, PartnerService $partnerService)
     {
         $this->service = $service;
         $this->typeService = $typeService;
         $this->partnerService = $partnerService;
+        $this->baseService = new BaseInfoService();
     }
 
     public function index()
@@ -31,6 +34,8 @@ class IndexController
         $banners = $this->service->showBanner();
         $cateWithSchedule = $this->typeService->showTypesWithCategory();
         $partners = $this->partnerService->getPartners();
-        return view('frontend.index', compact(['banners', 'cateWithSchedule', 'partners']));
+        $baseList = $this->baseService->getTopBaseInfo();
+
+        return view('frontend.index', compact(['banners', 'cateWithSchedule', 'partners', 'baseList']));
     }
 }

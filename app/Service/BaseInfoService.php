@@ -35,4 +35,14 @@ class BaseInfoService extends Service
         }
         return BaseInfo::query()->get();
     }
+
+    public function getBaseInfo($id)
+    {
+        return BaseInfo::query()->findOrFail($id);
+    }
+
+    public function getTopBaseInfo($top = 3)
+    {
+        return BaseInfo::query()->orderByDesc('created_at')->take($top)->get();
+    }
 }

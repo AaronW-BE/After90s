@@ -1,11 +1,21 @@
 
 .introduction-video-wrap {
-    height: 25rem;
-    background-color: #f8d7da;
+    height: 33rem;
+    background-color: #1E242C;
+}
+
+.video-js {
+    margin: 0 auto;
+    height: 100%;
+    width: 70%;
 }
 
 .subjects-wrap {
     padding: .5rem;
+}
+
+.red {
+    color: #f77;
 }
 
 .subjects-wrap .subject {

@@ -38,7 +38,10 @@ class BaseController extends Controller
 
     public function detail($id)
     {
-
+        $baseInfo = $this->baseService->getBaseInfo($id);
+        return view('frontend.base-detail', compact([
+            'baseInfo'
+        ]));
     }
 
     public function query()

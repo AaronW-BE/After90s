@@ -13,7 +13,7 @@
         <div>
             <div class="filter-type">团建类型</div>
             <ul class="classification" data-type="schedule">
-                <li data-type_id="0">全部</li>
+                <li data-type_id="0" class="active">全部</li>
                 @foreach($types as $type)
                     <li data-type_id="{{$type->id}}" class="">{{$type->name}}</li>
                 @endforeach
@@ -24,7 +24,7 @@
         <div>
             <div class="filter-type">时间周期</div>
             <ul class="classification" data-type="duration">
-                <li data-type_id="0">全部</li>
+                <li data-type_id="0" class="active">全部</li>
                 @foreach($durationTypes as $type)
                     <li data-type_id="{{$type}}" class="">{{$type}}</li>
                 @endforeach
@@ -34,7 +34,7 @@
         <div>
             <div class="filter-type">人均费用</div>
             <ul class="classification" data-type="fee">
-                <li data-type_id="0">全部</li>
+                <li data-type_id="0" class="active">全部</li>
                 @foreach($feeTypes as $type)
                     <li data-type_id="{{$type}}" class="">{{$type}}</li>
                 @endforeach
@@ -88,7 +88,6 @@
                 let targetId = $(this).attr('data-type_id');
 
                 let targetType = $(this).parent('ul').attr('data-type');
-                console.log(targetType, targetId);
 
                 $(this).addClass('active').siblings().removeClass('active')
 
@@ -122,9 +121,8 @@
                     $('.schedule-list').empty();
 
                     data.forEach(function (item) {
-                        console.log(item)
                         let template = `
-                    <div class="schedule-item">
+                    <div class="schedule-item schedule-detail-btn" data-schedule_id="${item.id}" onclick="jump(this)">
                     <div class="cover">
                         <img src="${item.cover}" alt="">
                     </div>
@@ -149,6 +147,15 @@
                     })
                 }
             });
+        }
+
+        function jump(obj) {
+            let targetId = $(obj).attr('data-schedule_id');
+            if (targetId) {
+                let url = `{{route('schedule.detail', '_s_id_')}}`.replace('_s_id_', targetId);
+                console.log(url);
+                window.location.href = url;
+            }
         }
     </script>
 @endsection
