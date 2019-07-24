@@ -1,8 +1,8 @@
 <div class="swiper-container">
     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
         <div class="carousel-inner">
-            @foreach($list as $banner)
-                <div class="carousel-item active">
+            @foreach($list as $key => $banner)
+                <div class="carousel-item {{$key == 0 ? 'active': ''}}">
                     <div class="banner-img">
                         <img class="d-block w-100" src="{{$banner->path}}" alt="First slide">
                     </div>

@@ -1,6 +1,39 @@
 @extends('layouts.frontend')
 @section('styles')
     <link rel="stylesheet" href="{{asset('frontend/css/schedule-detail.css')}}">
+
+    <link rel="stylesheet" href="{{asset('frontend/lib/swiper/css/swiper.css')}}">
+
+    <style>
+        .schedule-preview {
+            width: 100%;
+            height: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .swiper-slide {
+            background-size: cover;
+            background-position: center;
+        }
+        .gallery-top {
+            height: 80%;
+            width: 100%;
+        }
+        .gallery-thumbs {
+            height: 20%;
+            box-sizing: border-box;
+            padding: 10px 0;
+        }
+        .gallery-thumbs .swiper-slide {
+            width: 25%;
+            height: 100%;
+        }
+        .gallery-thumbs .swiper-slide-thumb-active {
+            opacity: 1;
+            border: 2px solid #00bb00;
+        }
+
+    </style>
 @endsection
 
 @section('title')
@@ -11,18 +44,28 @@
     <div class="breadcrumb-wrap">
         <a href="{{route('index')}}">首页</a>
         <span> > </span>
-        <span>线路详情</span>
+        <span>线路详情: <span class="title">{{$schedule->title}}</span></span>
     </div>
 
     <div class="detail-wrap">
         <div class="pic-preview-wrap">
-            <div class="img-preview">
-                <img src="{{$schedule->cover}}" alt="">
+            <!-- Swiper -->
+            <div class="swiper-container schedule-preview gallery-top">
+                <div class="swiper-wrapper">
+                    @foreach($schedule->albums as $album)
+                        <div class="swiper-slide" style="background-image:url('{{$album}}')"></div>
+                    @endforeach
+                </div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next swiper-button-white"></div>
+                <div class="swiper-button-prev swiper-button-white"></div>
             </div>
-            <div class="img-list">
-                @foreach($schedule->albums as $album)
-                <div class="img"><img src="{{$album}}" alt=""></div>
-                @endforeach
+            <div class="swiper-container gallery-thumbs">
+                <div class="swiper-wrapper">
+                    @foreach($schedule->albums as $album)
+                        <div class="swiper-slide" style="background-image:url('{{$album}}')"></div>
+                    @endforeach
+                </div>
             </div>
         </div>
         <div class="schedule-detail-wrap">
@@ -38,9 +81,9 @@
                     {{$schedule->benefits}}
                 </div>
                 <div class="info-wrap">
-                    <span>{{$schedule->location}}</span>
-                    <span>{{$schedule->duration}}</span>
-                    <span>{{$schedule->people_count}}人</span>
+                    <span><div class="icon location"></div>{{$schedule->location}}</span>
+                    <span><div class="icon time"></div>{{$schedule->duration}}</span>
+                    <span><div class="icon people"></div>{{$schedule->people_count}}人</span>
                 </div>
 
                 <div class="amount-wrap">
@@ -102,6 +145,7 @@
 @endsection()
 
 @section('scripts')
+    <script src="{{asset('frontend/lib/swiper/js/swiper.js')}}"></script>
     <script>
         $(function () {
             $('.btn-apply').on('click', function () {
@@ -148,6 +192,29 @@
                     }
                 });
             });
+        });
+    </script>
+
+    <script>
+        $(function () {
+            var galleryThumbs = new Swiper('.gallery-thumbs', {
+                spaceBetween: 10,
+                slidesPerView: 4,
+                freeMode: true,
+                watchSlidesVisibility: true,
+                watchSlidesProgress: true,
+            });
+            var galleryTop = new Swiper('.gallery-top', {
+                spaceBetween: 10,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                thumbs: {
+                    swiper: galleryThumbs
+                }
+            });
+
         });
     </script>
 @endsection

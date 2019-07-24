@@ -24,7 +24,6 @@
 <script src="{{asset('frontend/lib/lazyload/jquery.lazyload.js')}}"></script>
 <script src="{{asset('frontend/lib/bootstrap-4.3.1/js/bootstrap.js')}}"></script>
 <script src="{{asset('frontend/js/common.js')}}"></script>
-<script src="{{asset('frontend/js/common.js')}}"></script>
 
 @yield('scripts')
 

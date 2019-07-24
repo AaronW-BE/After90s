@@ -10,6 +10,7 @@
 namespace App\Http\Controllers\Frontend;
 
 
+use App\Banner;
 use App\Http\Controllers\Controller;
 use App\Service\ScheduleService;
 use App\Service\ScheduleTypeService;
@@ -27,7 +28,9 @@ class ScheduleController extends Controller
 
     public function view()
     {
-        $banners = [];
+        $banners = [
+            new Banner(['path' => 'http://www.qulang.com/usertpl/images/team_bg.jpg'])
+        ];
         $types = $this->typeService->getTypes();
         $feeTypes = $this->scheduleService->getPriceTypes();
         $durationTypes = $this->scheduleService->getDurationTypes();

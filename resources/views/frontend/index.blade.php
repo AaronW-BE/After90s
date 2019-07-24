@@ -10,7 +10,6 @@
 @endsection
 
 @section('content')
-
     <!--    // 热门推荐-->
     {{--    <div class="section-title">优选特惠</div>--}}
     {{--    <div class="hot-recommend-container">--}}
@@ -135,9 +134,9 @@
 
     <!--    // 分类列表-->
     <div class="case-category-container">
-        @foreach($cateWithSchedule as $cate)
+        @foreach($cateWithSchedule as $cate_index => $cate)
             <div class="category-wrap">
-                <div class="section-title">{{$cate->name}}</div>
+                <div class="section-title">{{ strlen($cate_index + 1) == 1 ? '0' . ($cate_index + 1) : $cate_index + 1 }} {{$cate->name}}</div>
                 <div class="list">
                     @foreach($cate->schedules as $schedule)
                         <div class="list-item schedule-detail-btn" data-schedule_id="{{$schedule->id}}">
@@ -162,10 +161,12 @@
                     @endforeach
                 </div>
             </div>
+            <div class="divider-line"></div>
+
         @endforeach
 
         <div class="category-wrap">
-            <div class="section-title">基地探索</div>
+            <div class="section-plain-text">基地探索</div>
             <div class="list">
                 @foreach($baseList as $base)
                     <div class="list-item base-detail-btn" data-base_id="{{$base->id}}">
@@ -179,7 +180,7 @@
                             <span class="cover-bg-playback">播放：{{random_int(100,500)}}</span>
                         </div>
                         <div class="cover-bg-font">
-                            <span>藏西秘境 去浪阿里</span>
+                            <span>{{$base->title}}</span>
                         </div>
                     </div>
                 @endforeach
@@ -218,7 +219,7 @@
     </div>
     <!--    选择我们的理由-->
     <div>
-        <div class="section-title">选择我们的理由</div>
+        <div class="section-title plain-text">选择我们的理由</div>
         <div class="reason-wrap">
             <div class="reason-item">
                 <div class="icon">

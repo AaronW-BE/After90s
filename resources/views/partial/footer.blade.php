@@ -10,7 +10,8 @@
                 </div>
 
                 <div class="contact-wrap">
-                    全国服务电话：400-115-6688
+                    <div>定制热线：0571-85183825</div>
+                    <div style="font-size: 1.2rem">线路咨询：15700063645 (90后阿秉)，18966487994 (90后阿邦)</div>
                 </div>
 
                 <div class="site-info-wrap">
@@ -20,6 +21,7 @@
             </div>
             <div class="col-md">
                 <div class="qrcode-wrap">
+                    <img style="width: 100%;" src="{{asset('frontend/img/qrcode.jpg')}}" alt="">
                 </div>
             </div>
         </div>

@@ -59,7 +59,7 @@ Route::middleware(['jwt.auth'])->namespace('Admin')->group(function () {
 
     // 基地类型
     Route::get('base-type/{id?}', 'BaseTypeController@show');
-    Route::post('base-type', 'BaseTypeController@create');
+    Route::post('base-type/create', 'BaseTypeController@create');
     Route::delete('base-type/{id}', 'BaseTypeController@remove');
 
     // 合作伙伴

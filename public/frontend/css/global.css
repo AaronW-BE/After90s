@@ -20,17 +20,25 @@ body {
 }
 /*分组标题*/
 .section-title {
-    padding: 1.2rem 0.5rem 0.5rem 0.5rem;
     font-size: 1.3rem;
-    display: inline-block;
-    border-bottom: 0.2rem solid;
-    margin-bottom: 1rem;
+    height: 60px;
+    line-height: 55px;
+    width: 100%;
+    background: url("/frontend/img/t1bg.png") no-repeat;
+    background-position: left bottom;
+    position: relative;
+    color: #ffffff;
+    padding-left: 30px;
+    margin: 20px 10px;
 }
 
-.section-title:hover {
-    transition: all .5s;
-    color: #07B23E;
-    border-bottom-color:#07B23E;
+.section-plain-text {
+    font-size: 1.5rem;
+    padding: .5rem;
+    margin: 20px 10px;
+    border-bottom: 2px solid #00bb00;
+    color: #00bb00;
+    font-weight: bold;
 }
 
 /*导航栏*/
@@ -73,4 +81,36 @@ body {
     width: 10rem;
     height: 10rem;
     background-color: #fff;
+}
+
+
+.icon {
+    width: 28px;
+    height: 28px;
+    display: inline-block;
+    background-position: center;
+    background-size: contain;
+    margin: 2px;
+    background-repeat: no-repeat;
+}
+
+.icon.location {
+    background: url("/frontend/img/icon/icon-location.png");
+}
+
+.icon.people {
+    background: url("/frontend/img/icon/people.png");
+}
+
+.icon.time {
+    background: url("/frontend/img/icon/time.png");
+}
+
+.divider-line {
+    height: 36px;
+    background: url("'/frontend/img/divide-line.png") no-repeat;
+    background-position: center;
+    -webkit-background-size: contain;
+    background-size: contain;
+    font-size: 0;
 }

@@ -14,13 +14,16 @@
 use Illuminate\Support\Facades\Route;
 
 
+/*
 Route::get('/', function () {
-//    $u = \App\User::query()->create([
-//        'username' => 'admin',
-//        'password' => '123456'
-//    ]);
-//    return $u;
+    $u = \App\User::query()->create([
+        'username' => 'admin',
+        'password' => 'admin123'
+    ]);
+    return $u;
 });
+
+*/
 
 Route::namespace('Frontend')->group(function () {
     Route::get('/', 'IndexController@index')->name('index');

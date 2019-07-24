@@ -11,8 +11,8 @@
 .classification-wrap{
     background-color: #fff;
     /*height:30rem;*/
-    margin: 1rem;
-    padding: .5rem;
+    margin-top: 2rem;
+    padding: .5rem .5rem 2rem;
 }
 
 .classification-wrap .filter-type {

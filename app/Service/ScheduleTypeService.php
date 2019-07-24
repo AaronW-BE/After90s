@@ -31,7 +31,7 @@ class ScheduleTypeService extends Service
     public function showTypesWithCategory()
     {
         return ScheduleType::query()->with(['schedules' => function($query){
-            $query->take(5);
+            //$query->take(5);
         }])->get();
     }
 
