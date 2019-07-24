@@ -151,7 +151,7 @@
     overflow: hidden;
 }
 .case-category-container .list .list-item:hover {
-    box-shadow: 0.2rem 0.2rem 0.5rem #efefef;
+    box-shadow: 2px 2px 2px 2px #ededed;
 }
 .case-category-container .list .list-item .cover{
     height:12rem;
@@ -267,4 +267,9 @@ body{
 }
 .corp-item img {
     width:100%;
+}
+
+
+.category-wrap {
+    margin-bottom: 2rem;
 }

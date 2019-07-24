@@ -108,7 +108,7 @@ body {
 
 .divider-line {
     height: 36px;
-    background: url("'/frontend/img/divide-line.png") no-repeat;
+    background: url("/frontend/img/divider-line.png") no-repeat;
     background-position: center;
     -webkit-background-size: contain;
     background-size: contain;
