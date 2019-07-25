@@ -166,7 +166,7 @@
         @endforeach
 
         <div class="category-wrap">
-            <div class="section-plain-text">基地探索</div>
+            <div class="section-title">&nbsp; &nbsp; &nbsp; &nbsp;基地探索</div>
             <div class="list">
                 @foreach($baseList as $base)
                     <div class="list-item base-detail-btn" data-base_id="{{$base->id}}">
@@ -187,8 +187,10 @@
             </div>
         </div>
     </div>
+
+    <div class="divider-line"></div>
     <!--    // 轮播-->
-    <div class="swiper-container">
+    <div class="swiper-container" style="margin-top: 3rem">
         <div id="carouselExampleFade2" class="carousel slide carousel-fade" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -219,10 +221,10 @@
     </div>
     <!--    选择我们的理由-->
     <div>
-        <div class="section-title plain-text">选择我们的理由</div>
+        <div class="section-plain-text">选择我们的理由</div>
         <div class="reason-wrap">
             <div class="reason-item">
-                <div class="icon">
+                <div class="">
                     <img class="lazy" data-original="{{asset('frontend/img/icon/svg%20(4).svg')}}" alt="">
                 </div>
                 <div>
@@ -239,7 +241,7 @@
                 </div>
             </div>
             <div class="reason-item">
-                <div class="icon">
+                <div class="">
                     <img class="lazy" data-original="{{asset('frontend/img/icon/svg%20(3).svg')}}" alt="">
                 </div>
                 <div>
@@ -256,7 +258,7 @@
                 </div>
             </div>
             <div class="reason-item">
-                <div class="icon">
+                <div class="">
                     <img class="lazy" data-original="{{asset('frontend/img/icon/svg%20(2).svg')}}" alt="">
                 </div>
                 <div>
@@ -273,7 +275,7 @@
                 </div>
             </div>
             <div class="reason-item">
-                <div class="icon">
+                <div class="">
                     <img class="lazy" data-original="{{asset('frontend/img/icon/svg%20(1).svg')}}" alt="">
                 </div>
                 <div>
@@ -294,6 +296,7 @@
     <!--    合作-->
     <div>
         @if(count($partners))
+            <div class="divider-line"></div>
             <div class="section-title">合作伙伴</div>
             <div class="corp-wrap">
                 @foreach($partners as $partner)
