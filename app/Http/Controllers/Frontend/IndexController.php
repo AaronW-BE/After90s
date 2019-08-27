@@ -33,9 +33,16 @@ class IndexController
     {
         $banners = $this->service->showBanner();
         $cateWithSchedule = $this->typeService->showTypesWithCategory();
+
+        $recommendSchedule = $this->typeService->getRecommendSchedules();
         $partners = $this->partnerService->getPartners();
         $baseList = $this->baseService->getTopBaseInfo();
 
-        return view('frontend.index', compact(['banners', 'cateWithSchedule', 'partners', 'baseList']));
+        return view('frontend.index', compact([
+            'banners',
+            'cateWithSchedule',
+            'partners',
+            'baseList',
+            'recommendSchedule']));
     }
 }

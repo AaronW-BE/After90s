@@ -1,6 +1,6 @@
 
 {{--navbar--}}
-<nav class="navbar navbar-expand-lg navbar-light shadow-sm">
+<nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light shadow">
     <div class="container">
         <a class="navbar-brand" href="{{route('index')}}">
             <img src="{{asset('frontend/img/logo.png')}}" height="60" alt="">

@@ -68,6 +68,8 @@
 
 .item-card .item-card-footer {
     padding: 0.3rem;
+    position: relative;
+    height: 7rem;
 }
 
 .item-card .item-card-footer .caption {
@@ -75,10 +77,19 @@
     text-align: left;
     color: #333;
 }
+
+.item-card .item-card-footer .people_count {
+    text-align: left;
+    color: #333;
+    font-size: 10px;
+}
 .item-card .item-card-footer .desc {
     margin-top: 1rem;
     text-align: right;
     color: #787878;
+    position: absolute;
+    bottom: .5rem;
+    right: .5rem;
 }
 .hot-recommend-container .item-card:first-child {
     width: 25rem;
@@ -118,6 +129,8 @@
     white-space:nowrap;
     font-size: 1.2rem;
     line-height: 1.6rem;
+    text-align: left;
+    padding-left: .5rem;
 }
 .hot-recommend-container .introduction .introduction-left .introduction-left-desc {
     line-height: 1.4rem;
@@ -258,15 +271,17 @@ body{
 .corp-item {
     display: inline-block;
     width: 13rem;
+    height: 7.5rem;
     /*height:9rem;*/
-    border: 1px solid #ccc;
     margin: 0.3rem;
+    overflow: hidden;
 }
 .corp-item:hover{
     border: 1px solid #27aefb;
 }
 .corp-item img {
     width:100%;
+    line-height: 7.5rem;
 }
 
 

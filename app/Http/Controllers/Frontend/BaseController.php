@@ -10,6 +10,7 @@
 namespace App\Http\Controllers\Frontend;
 
 
+use App\Banner;
 use App\Http\Controllers\Controller;
 use App\Service\BaseInfoService;
 use App\Service\BaseTypeService;
@@ -27,7 +28,11 @@ class BaseController extends Controller
 
     public function view()
     {
-        $banners = [];
+        $banners = [
+            new Banner([
+                'path' => '/frontend/img/banner-base.jpg'
+            ])
+        ];
 
         $baseTypes = $this->typeService->getTypes();
         return view('frontend.base', compact([

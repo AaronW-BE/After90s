@@ -13,11 +13,6 @@
                     <div>定制热线：0571-85183825</div>
                     <div style="font-size: 1.2rem">线路咨询：15700063645 (90后阿秉)，18966487994 (90后阿邦)</div>
                 </div>
-
-                <div class="site-info-wrap">
-                    <span class="copyright">Copyright {{date('Y')}} 杭州秉诚户外运动策划有限公司. All Rights Reserved</span>
-                    <span class="record"> 浙ICP备19026214号-1 </span>
-                </div>
             </div>
             <div class="col-md">
                 <div class="qrcode-wrap">
@@ -26,6 +21,10 @@
             </div>
         </div>
     </div>
+</div>
+<div class="site-info-wrap">
+    <span class="copyright">Copyright {{date('Y')}} 杭州秉诚户外运动策划有限公司. All Rights Reserved</span>
+    <span class="record"> 浙ICP备19026214号-1 </span>
 </div>
 
 <script>

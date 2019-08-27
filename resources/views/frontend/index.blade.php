@@ -11,132 +11,66 @@
 
 @section('content')
     <!--    // 热门推荐-->
-    {{--    <div class="section-title">优选特惠</div>--}}
-    {{--    <div class="hot-recommend-container">--}}
-    {{--        <div class="item-card introduction-wrap">--}}
-    {{--            <a href="./schedule-detail.html">--}}
-    {{--                <div class="cover big-img">--}}
-    {{--                    <img class="lazy" data-original="../img/index/1.jpeg" alt="">--}}
-    {{--                </div>--}}
-    {{--                <div class="caption introduction">--}}
-    {{--                    <div class="introduction-left">--}}
-    {{--                        <div style="overflow: hidden">--}}
-    {{--                            <div class="introduction-left-title">丽江+双古城+玉龙雪山+蓝月谷+丽江+双古城+玉龙雪山+蓝月谷</div>--}}
-    {{--                            <div class="introduction-left-desc">国内游.杭州出发</div>--}}
-    {{--                        </div>--}}
-    {{--                    </div>--}}
-    {{--                    <div class="introduction-right">--}}
-    {{--                        <div style="overflow: hidden; height: 3rem; font-size: 1rem; line-height: 3rem">--}}
-    {{--                            <span>￥<span style="font-size: 1.5rem">3162</span>起</span>--}}
-    {{--                        </div>--}}
-    {{--                    </div>--}}
-    {{--                </div>--}}
-    {{--            </a>--}}
-    {{--        </div>--}}
-    {{--        <div class="item-card ">--}}
-    {{--            <a href="./schedule-detail.html">--}}
-    {{--                <div class="cover">--}}
-    {{--                    <img class="lazy" data-original="../img/index/2.jpg" alt="">--}}
-    {{--                    <div class="price">299起</div>--}}
-    {{--                </div>--}}
-    {{--                <div class="item-card-footer">--}}
-    {{--                    <div class="caption">普吉岛6日或7日半自助游</div>--}}
-    {{--                    <div class="desc">杭州出发</div>--}}
-    {{--                </div>--}}
-    {{--            </a>--}}
-    {{--        </div>--}}
-    {{--        <div class="item-card ">--}}
-    {{--            <a href="#">--}}
-    {{--                <div class="cover">--}}
-    {{--                    <img class="lazy" data-original="../img/index/3.jpg" alt="">--}}
-    {{--                    <div class="price">299起</div>--}}
-    {{--                </div>--}}
-    {{--                <div class="item-card-footer">--}}
-    {{--                    <div class="caption">普吉岛6日或7日半自助游</div>--}}
-    {{--                    <div class="desc">杭州出发</div>--}}
-    {{--                </div>--}}
-    {{--            </a>--}}
-    {{--        </div>--}}
-    {{--        <div class="item-card ">--}}
-    {{--            <a href="#">--}}
-    {{--                <div class="cover">--}}
-    {{--                    <img class="lazy" data-original="../img/index/images%20(1).jpg" alt="">--}}
-    {{--                    <div class="price">299起</div>--}}
-    {{--                </div>--}}
-    {{--                <div class="item-card-footer">--}}
-    {{--                    <div class="caption">普吉岛6日或7日半自助游</div>--}}
-    {{--                    <div class="desc">杭州出发</div>--}}
-    {{--                </div>--}}
-    {{--            </a>--}}
-    {{--        </div>--}}
-    {{--        <div class="item-card ">--}}
-    {{--            <a href="#">--}}
-    {{--                <div class="cover">--}}
-    {{--                    <img class="lazy" data-original="../img/index/images.jpg" alt="">--}}
-    {{--                    <div class="price">299起</div>--}}
-    {{--                </div>--}}
-    {{--                <div class="item-card-footer">--}}
-    {{--                    <div class="caption">普吉岛6日或7日半自助游</div>--}}
-    {{--                    <div class="desc">杭州出发</div>--}}
-    {{--                </div>--}}
-    {{--            </a>--}}
-    {{--        </div>--}}
-    {{--        <div class="item-card ">--}}
-    {{--            <a href="#">--}}
-    {{--                <div class="cover">--}}
-    {{--                    <img class="lazy" data-original="../img/index/images%20(2).jpg" alt="">--}}
-    {{--                    <div class="price">299起</div>--}}
-    {{--                </div>--}}
-    {{--                <div class="item-card-footer">--}}
-    {{--                    <div class="caption">普吉岛6日或7日半自助游</div>--}}
-    {{--                    <div class="desc">杭州出发</div>--}}
-    {{--                </div>--}}
-    {{--            </a>--}}
-    {{--        </div>--}}
-    {{--        <div class="item-card ">--}}
-    {{--            <a href="#">--}}
-    {{--                <div class="cover">--}}
-    {{--                    <img class="lazy" data-original="../img/index/banner.jpg" alt="">--}}
-    {{--                    <div class="price">299起</div>--}}
-    {{--                </div>--}}
-    {{--                <div class="item-card-footer">--}}
-    {{--                    <div class="caption">普吉岛6日或7日半自助游</div>--}}
-    {{--                    <div class="desc">杭州出发</div>--}}
-    {{--                </div>--}}
-    {{--            </a>--}}
-    {{--        </div>--}}
-    {{--        <div class="item-card ">--}}
-    {{--            <a href="#">--}}
-    {{--                <div class="cover">--}}
-    {{--                    <img class="lazy" data-original="../img/index/1.jpeg" alt="">--}}
-    {{--                    <div class="price">299起</div>--}}
-    {{--                </div>--}}
-    {{--                <div class="item-card-footer">--}}
-    {{--                    <div class="caption">普吉岛6日或7日半自助游</div>--}}
-    {{--                    <div class="desc">杭州出发</div>--}}
-    {{--                </div>--}}
-    {{--            </a>--}}
-    {{--        </div>--}}
-    {{--        <div class="item-card ">--}}
-    {{--            <a href="#">--}}
-    {{--                <div class="cover">--}}
-    {{--                    <img class="lazy" data-original="../img/index/2.jpg" alt="">--}}
-    {{--                    <div class="price">299起</div>--}}
-    {{--                </div>--}}
-    {{--                <div class="item-card-footer">--}}
-    {{--                    <div class="caption">普吉岛6日或7日半自助游</div>--}}
-    {{--                    <div class="desc">杭州出发</div>--}}
-    {{--                </div>--}}
-    {{--            </a>--}}
-    {{--        </div>--}}
-    {{--        <div class="clearfix"></div>--}}
-    {{--    </div>--}}
+        <div class="section-title" style="margin-top: 2rem">
+            <div class="index">N</div>
+            <div class="title">优选特惠</div>
+        </div>
+        <div class="hot-recommend-container">
+            @foreach($recommendSchedule as $key => $item)
+                @if($key === 0)
+                    <div class="item-card introduction-wrap">
+                        <a href="{{route('schedule.detail', $item->id)}}">
+                            <div class="cover big-img">
+                                <img class="lazy" data-original="{{$item->cover}}" alt="">
+                            </div>
+                            <div class="caption introduction">
+                                <div class="introduction-left">
+                                    <div style="overflow: hidden">
+                                        <div class="introduction-left-title">{{$item->title}}</div>
+                                        <div class="introduction-left-desc">{{$item->location}}</div>
+                                    </div>
+                                </div>
+                                <div class="introduction-right">
+                                    <div style="overflow: hidden; height: 3rem; font-size: 1rem; line-height: 3rem">
+                                        <span>￥<span style="font-size: 1.5rem">{{$item->price}}</span>起</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                @else
+                    <div class="item-card ">
+                        <a href="{{route('schedule.detail', $item->id)}}">
+                            <div class="cover">
+                                <img class="lazy" data-original="{{$item->cover}}" alt="">
+                                <div class="price">{{$item->price}}起</div>
+                            </div>
+                            <div class="item-card-footer">
+                                <div class="caption">{{$item->title}}</div>
+                                <div class="people_count">推荐人数：{{$item->people_count}}</div>
+                                <div class="desc">{{$item->location}}</div>
+                            </div>
+                        </a>
+                    </div>
+                @endif
+            @endforeach
+
+
+
+            <div class="clearfix"></div>
+        </div>
 
     <!--    // 分类列表-->
     <div class="case-category-container">
         @foreach($cateWithSchedule as $cate_index => $cate)
             <div class="category-wrap">
-                <div class="section-title">{{ strlen($cate_index + 1) == 1 ? '0' . ($cate_index + 1) : $cate_index + 1 }} {{$cate->name}}</div>
+                <div class="section-title">
+                    <span class="index">{{ strlen($cate_index + 1) == 1 ? '0' . ($cate_index + 1) : $cate_index + 1 }}</span>
+                    <span class="title">{{$cate->name}}</span>
+                    <a href="{{route('schedule.list')}}" class="more">
+                        <span class="more">更多></span>
+                    </a>
+                </div>
                 <div class="list">
                     @foreach($cate->schedules as $schedule)
                         <div class="list-item schedule-detail-btn" data-schedule_id="{{$schedule->id}}">
@@ -166,7 +100,13 @@
         @endforeach
 
         <div class="category-wrap">
-            <div class="section-title">&nbsp; &nbsp; &nbsp; &nbsp;基地探索</div>
+            <div class="section-title">
+                <span class="index">*</span>
+                <span class="title">基地探索</span>
+                <a href="{{route('base.list')}}" class="more">
+                    <span>更多></span>
+                </a>
+            </div>
             <div class="list">
                 @foreach($baseList as $base)
                     <div class="list-item base-detail-btn" data-base_id="{{$base->id}}">
@@ -297,7 +237,7 @@
     <div>
         @if(count($partners))
             <div class="divider-line"></div>
-            <div class="section-title">合作伙伴</div>
+            <div class="section-title-plain-text">合作伙伴</div>
             <div class="corp-wrap">
                 @foreach($partners as $partner)
                     <div class="corp-item">

@@ -99,7 +99,10 @@
         </div>
 
         <div class="clearfix"></div>
-        <div class="section-title">方案详情</div>
+        <div class="section-title">
+            <div class="index">D</div>
+            <div class="title">方案详情</div>
+        </div>
         <div class="schedule-desc-wrap">
             {!! $schedule->description !!}
         </div>
